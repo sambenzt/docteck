@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekmiros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="min-h-screen h-full bg-gray-50 w-full roboto-flex">
+    <!-- navbar -->
+    <header class="flex justify-between w-full sticky top-0 z-50 items-center border-slate-400 border-b-[1px] backdrop-blur text-slate-900 p-3 text-2xl">
+        <section>
+            <a href="index.html">
+                <svg width="40px" height="40px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><style>.a{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="a" d="M40.5,5.5H7.5a2,2,0,0,0-2,2v33a2,2,0,0,0,2,2h33a2,2,0,0,0,2-2V7.5A2,2,0,0,0,40.5,5.5Z"/><path class="a" d="M23.9371,14.3386V30.8812a2.78,2.78,0,0,0,2.78,2.78h.834"/><line class="a" x1="21.0178" y1="18.926" x2="26.8564" y2="18.926"/></svg>
+            </a>
+        </section>
+        <section class="w-2/4">
+            <input type="search" class="w-full px-3 py-2 text-sm rounded border focus:outline-none border-slate-400" placeholder="search...">
+        </section>
+        <section class="flex gap-5 mr-5">
+            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="9" r="3" stroke="darkgray" stroke-width="1"/>
+                <circle cx="12" cy="12" r="10" stroke="darkgray" stroke-width="1"/>
+                <path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="darkgray" stroke-width="1" stroke-linecap="round"/>
+                </svg>
+                <svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="darkgray" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="22" y1="12" x2="20" y2="12"></line><line x1="4" y1="12" x2="2" y2="12"></line><line x1="19.07" y1="19.07" x2="17.66" y2="17.66"></line><line x1="6.34" y1="6.34" x2="4.93" y2="4.93"></line><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line></svg>
+        </section>
+    </header>
+
+    <main class="flex min-h-screen h-full">
+        <aside class="flex flex-col p-8 pb-20 fixed h-screen w-1/5 overflow-y-scroll">
+            <div>
+                <h2 class="font-semibold text-slate-800">Principal</h2>
+                <ul class="flex flex-col gap-2 pt-1 mt-1 border-l-2 border-sky-700">
+                   <li class="pl-3 text-sky-500  hover:text-sky-500 cursor-pointer">About</li>
+                   <li class="pl-3 text-slate-600  hover:text-sky-500 cursor-pointer">Repository</li>
+                   <li class="pl-3 text-slate-600  hover:text-sky-500 cursor-pointer">Endpoints</li>
+              </ul>
+           </div>
+           <div class="mt-10">
+                <h2 class="font-semibold text-slate-800">Highlight</h2>
+                <ul class="flex flex-col gap-2 pt-1 mt-1 border-l-2 border-sky-700">
+                  <li class="pl-3 text-slate-600  hover:text-sky-500 cursor-pointer">Feature 3</li>
+                  <li class="pl-3 text-slate-600  hover:text-sky-500 cursor-pointer">Feature 5</li>
+                  <li class="pl-3 text-slate-600  hover:text-sky-500 cursor-pointer">Feature 8</li>
+                  <li class="pl-3 text-slate-600  hover:text-sky-500 cursor-pointer">Fix X</li>
+              </ul>
+           </div>
+           <div class="mt-10">
+            <h2 class="font-semibold text-slate-800">Versions</h2>
+                <ul class="flex flex-col gap-2 mt-3">
+                    <script>
+                        for (let i = 1; i < 10; i++) {
+                            document.write(`
+                                <li>
+                                    <div class="mb-5">
+                                        <a href="version.html">
+                                            <h2 class="font-semibold text-slate-700 hover:text-sky-500 cursor-pointer">${i}.0.0</h2>
+                                        </a>
+                                        <ul class="flex flex-col gap-1 p-3">
+                                        <li class="text-slate-600 hover:text-sky-500 cursor-pointer">Fix 1</li>
+                                        <li class="text-slate-600 hover:text-sky-500 cursor-pointer">Fix 2</li>
+                                        <li class="text-slate-600 hover:text-sky-500 cursor-pointer"><a href="#title${i}">Title Feature ${i}</a></li>
+                                        </ul>
+                                </div>
+                                </li>
+                            `)
+                        }
+                    </script>
+                  
+              </ul>
+           </div>
+        </aside>
+        <section class="w-full p-10 flex justify-end">
+            <div class="w-4/5">
+                <div id="main-content" class="p-8 rounded">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">Proyect Name</h1>
+               
+                    <article id="description" class="mt-5">
+                        <p class="text-lg text-slate-700 dark:text-slate-300">
+                            About Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consequatur laudantium inventore ducimus! Nihil quibusdam eligendi at? Odit, dolore veritatis porro error minima voluptatem autem nostrum nisi sint asperiores voluptas?
+                            Deleniti dignissimos doloribus dicta ipsa quibusdam pariatur doloremque, tempore architecto. Aliquam rem quaerat ipsa reiciendis itaque perferendis, incidunt optio obcaecati iste enim quia! Adipisci temporibus saepe quas, porro harum provident!
+                        </p>
+                    </article>
+                </div>
+                <article>
+                <script>
+                    for (let i = 1; i < 0; i++) {
+                        document.write(`
+                            <a href="version.html">
+                                <h2 class="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">Version ${i}.0.0</h2>
+                            </a>
+                            <p>
+                                <h3 id="title${i}" class="text-slate-800 text-lg tracking-tight font-bold mb-3 dark:text-slate-200">Title Feature ${i}</h3>
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                 lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+                                lorem ipsum
+
+
+                            </p>
+                        `)
+                    }
+                </script>
+                </article>
+            
+        </div>
+        </section>
+    </main>
+</body>
+
+</html>

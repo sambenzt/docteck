@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css o dentro de tu archivo CSS */
+aside::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 5px;
+  }
+
+
+aside::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+ 
+
+.roboto-flex {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.code-block-light {
+  background-color: #f6f8fa !important; 
+  border-radius: 5px;
+}
