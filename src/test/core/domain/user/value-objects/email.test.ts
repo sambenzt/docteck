@@ -1,24 +1,24 @@
-import { Email } from '../../../../../core/domain/user/value-objects/Email'
+import { UserMother } from '../mother/user.mother'
 
 describe('Email Value Object', () => {
   it('should be defined if valid email', () => {
     expect(() => {
-      new Email('user@example.com')
-      new Email('john.doe@domain.org')
-      new Email('user123@sub.domain.com')
-      new Email('test+tag@example.net')
-      new Email('info@my-site.com')
+      UserMother.Email('user@example.com')
+      UserMother.Email('john.doe@domain.org')
+      UserMother.Email('user123@sub.domain.com')
+      UserMother.Email('test+tag@example.net')
+      UserMother.Email('info@my-site.com')
     }).not.toThrow()
   })
 
   it('should throw error if email is empty', () => {
-    expect(() => new Email('')).toThrow()
+    expect(() => UserMother.Email('')).toThrow()
   })
 
   it('should throw error if email is not valid format', () => {
-    expect(() => new Email('user@.com')).toThrow()
-    expect(() => new Email('@example.com')).toThrow()
-    expect(() => new Email('user@example')).toThrow()
-    expect(() => new Email('john@domain.c')).toThrow()
+    expect(() => UserMother.Email('user@.com')).toThrow()
+    expect(() => UserMother.Email('@example.com')).toThrow()
+    expect(() => UserMother.Email('user@example')).toThrow()
+    expect(() => UserMother.Email('john@domain.c')).toThrow()
   })
 })
