@@ -7,7 +7,6 @@ describe('Password Value Object', () => {
         }).not.toThrow()
     })
 
-
     it('should throw error if password is empty', () => {
         expect(() => new Password('')).toThrow()
     })
@@ -22,5 +21,5 @@ describe('Password Value Object', () => {
         expect(() => new Password('1234Aabcd5')).toThrow()
         expect(() => new Password('123@#/=?')).toThrow()
         expect(() => new Password('ABC@#/=?')).toThrow()
-      })
+    })
 })
