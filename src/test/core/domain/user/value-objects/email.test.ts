@@ -3,11 +3,11 @@ import { Email } from '../../../../../core/domain/user/value-objects/Email'
 describe('Email Value Object', () => {
   it('should be defined if valid email', () => {
     expect(() => {
-      new Email('usuario@ejemplo.com')
-      new Email('nombre.apellido@dominio.org')
-      new Email('usuario123@sub.dominio.com')
-      new Email('prueba+tag@ejemplo.net')
-      new Email('info@mi-sitio.com')
+      new Email('user@example.com')
+      new Email('john.doe@domain.org')
+      new Email('user123@sub.domain.com')
+      new Email('test+tag@example.net')
+      new Email('info@my-site.com')
     }).not.toThrow()
   })
 
@@ -16,9 +16,9 @@ describe('Email Value Object', () => {
   })
 
   it('should throw error if email is not valid format', () => {
-    expect(() => new Email('usuario@.com')).toThrow()
-    expect(() => new Email('@ejemplo.com')).toThrow()
-    expect(() => new Email('usuario@ejemplo')).toThrow()
-    expect(() => new Email('nombre@dominio.c')).toThrow()
+    expect(() => new Email('user@.com')).toThrow()
+    expect(() => new Email('@example.com')).toThrow()
+    expect(() => new Email('user@example')).toThrow()
+    expect(() => new Email('john@domain.c')).toThrow()
   })
 })
