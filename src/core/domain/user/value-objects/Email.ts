@@ -1,3 +1,5 @@
+import { InvalidEmailException } from "../../exceptions/invalid-email-exception"
+
 export class Email {
   constructor (public readonly value: string) {
     this.validateOrThrowError(value)
@@ -10,7 +12,7 @@ export class Email {
 
   private throwErrorIfisEmpty (value: string): void {
     if (value.length === 0) {
-      throw new Error()
+      this.throwException()
     }
   }
 
@@ -18,7 +20,11 @@ export class Email {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
     if (!emailRegex.test(value)) {
-      throw new Error()
+      this.throwException()
     }
+  }
+
+  private throwException(): void {
+    throw new InvalidEmailException()
   }
 }

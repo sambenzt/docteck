@@ -1,3 +1,5 @@
+import { InvalidIdException } from "../../exceptions/invalid-Id-exception"
+
 export class Id {
   public static MIN_LENGTH = 1
 
@@ -12,13 +14,18 @@ export class Id {
 
   private throwErrorIfisInvalidType (value: any): void {
     if (typeof value !== 'string') {
-      throw new Error()
+      this.throwException()
     }
   }
 
   private throwErrorIfisInvalidLength (value: string): void {
     if (value.length < Id.MIN_LENGTH) {
-      throw new Error()
+      this.throwException()
     }
   }
+
+  private throwException(): void {
+    throw new InvalidIdException()
+  }
+
 }

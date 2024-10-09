@@ -1,3 +1,4 @@
+import { InvalidPasswordException } from "../../exceptions/invalid-password-exception"
 
 export class Password 
 {
@@ -12,19 +13,23 @@ export class Password
 
     private throwErrorIfisEmpty (value: string): void {
         if (value.length === 0) {
-          throw new Error()
+          this.throwException()
         }
     }
 
     private throwErrorIfLengthIsLessThanMinimumLength(value: string): void {
         if(value.length < Password.MIN_LENGTH) {
-            throw new Error()
+            this.throwException()
         }
     }
 
     private throwErrorIfLengthIsGreatherThanMaximumLength(value: string): void {
         if(value.length > Password.MAX_LENGTH) {
-            throw new Error()
+            this.throwException()
         }
+    }
+
+    private throwException(): void {
+        throw new InvalidPasswordException()
     }
 }

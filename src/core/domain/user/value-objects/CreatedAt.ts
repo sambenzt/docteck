@@ -1,3 +1,4 @@
+import { InvalidCreatedAtException } from "../../exceptions/invalid-created-at-exception"
 
 export class CreatedAt {
     constructor(public readonly value: string) {
@@ -8,14 +9,14 @@ export class CreatedAt {
 
     private throwErrorIfisEmpty (value: string): void {
         if (value.length === 0) {
-          throw new Error()
+            this.throwException()
         }
     }
 
     private throwErrorIfValueIsInvalidFormat(value: string): void {
         const regex = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/
         if (!regex.test(value)) {
-            throw new Error()
+            this.throwException()
         }
     }
 
@@ -34,7 +35,11 @@ export class CreatedAt {
         )
 
         if(valid === false) {
-            throw new Error()
+            this.throwException()
         }
+    }
+
+    private throwException(): void {
+        throw new InvalidCreatedAtException
     }
 }
