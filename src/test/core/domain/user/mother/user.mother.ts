@@ -1,10 +1,10 @@
-import moment from 'moment';
-import { faker } from '@faker-js/faker';
-import { Id } from "../../../../../core/domain/user/value-objects/id";
-import { Email } from "../../../../../core/domain/user/value-objects/Email";
-import { Password } from "../../../../../core/domain/user/value-objects/Password";
-import { CreatedAt } from "../../../../../core/domain/user/value-objects/CreatedAt";
-import { User } from "../../../../../core/domain/user/user";
+import moment from 'moment'
+import { faker } from '@faker-js/faker'
+import { Id } from "../../../../../core/domain/user/value-objects/id"
+import { Email } from "../../../../../core/domain/user/value-objects/Email"
+import { Password } from "../../../../../core/domain/user/value-objects/Password"
+import { CreatedAt } from "../../../../../core/domain/user/value-objects/CreatedAt"
+import { User } from "../../../../../core/domain/user/user"
 
 export class UserMother {
 
@@ -24,7 +24,7 @@ export class UserMother {
     }
 
     public static CreatedAt(value?: string): CreatedAt {
-        const date = moment(faker.date.anytime()).format('YYYY-MM-DD HH:mm:ss');
+        const date = moment(faker.date.anytime()).format('YYYY-MM-DD HH:mm:ss')
         return new CreatedAt(value ?? date)
     }
 

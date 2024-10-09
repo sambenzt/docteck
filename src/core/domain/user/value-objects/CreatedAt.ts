@@ -13,17 +13,17 @@ export class CreatedAt {
     }
 
     private throwErrorIfValueIsInvalidFormat(value: string): void {
-        const regex = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/;
+        const regex = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/
         if (!regex.test(value)) {
             throw new Error()
         }
     }
 
     private throwErrorIfValueIsInvalidDate(value: string): void {
-        const [datePart, timePart] = value.split(' ');
-        const [year, month, day] = datePart.split('-').map(Number);
-        const [hours, minutes, seconds] = timePart.split(':').map(Number);
-        const date = new Date(year, month - 1, day, hours, minutes, seconds);
+        const [datePart, timePart] = value.split(' ')
+        const [year, month, day] = datePart.split('-').map(Number)
+        const [hours, minutes, seconds] = timePart.split(':').map(Number)
+        const date = new Date(year, month - 1, day, hours, minutes, seconds)
         const valid = (
           date.getFullYear() === year &&
           date.getMonth() === month - 1 &&
