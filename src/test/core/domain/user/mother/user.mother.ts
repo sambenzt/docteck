@@ -20,7 +20,9 @@ export class UserMother {
     }
 
     public static Password(value?: string): Password {
-        return new Password(value ?? 'Abcd@12345')
+        return new Password(value ?? faker.internet.password({
+            length: Password.MIN_LENGTH
+        }))
     }
 
     public static CreatedAt(value?: string): CreatedAt {
