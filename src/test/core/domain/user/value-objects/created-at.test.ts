@@ -3,7 +3,7 @@ import { UserMother } from "../mother/user.mother"
 describe('CreatedAt Value Object', () => {
     it('should be defined if valid date', () => {
       expect(() => {
-        UserMother.CreatedAt('2024-01-01 00:00:00')
+        UserMother.CreatedAt()
       }).not.toThrow()
     })
 
